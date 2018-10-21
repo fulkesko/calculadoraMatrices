@@ -1,6 +1,8 @@
 package main;
 
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 
 public class MenuPrincipal extends javax.swing.JFrame {
 
@@ -8,9 +10,27 @@ public class MenuPrincipal extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null); // centra el formulario
         setTitle("Calculadora");
+        //  matriz1suma();
 
     }
 
+    /*  public void matriz1suma() {
+        scrMatriz1Suma.setLayout(null);
+
+        int f, c;
+        JTextField hola1 = new JTextField("prueba 1");
+        cbMatriz1Suma.addItem("");
+        cbMatrizSuma1_1.addItem("");
+
+        for (int i = 0; i < 5; i++) {
+            cbMatriz1Suma.addItem("" + (i + 1));
+            cbMatrizSuma1_1.addItem("" + (i + 1));
+
+        }
+        
+     
+    }
+     */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -26,6 +46,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         scrMatriz3Suma = new javax.swing.JScrollPane();
         btnSumar = new javax.swing.JButton();
         btnResta = new javax.swing.JButton();
+        cbMatrizSuma1_1 = new javax.swing.JComboBox<>();
         formMultiplicacion = new javax.swing.JFrame();
         pnlMultiplica = new javax.swing.JPanel();
         scrMatriz1Multi = new javax.swing.JScrollPane();
@@ -85,8 +106,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(pnlAdicionLayout.createSequentialGroup()
                                 .addComponent(jLabel3)
-                                .addGap(27, 27, 27)
-                                .addComponent(cbMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(cbMatrizSuma1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(scrMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -113,7 +136,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(cbMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7))
+                            .addComponent(jLabel7)
+                            .addComponent(cbMatrizSuma1_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(42, 42, 42)
                         .addComponent(btnSumar)
                         .addGap(35, 35, 35)
@@ -537,6 +561,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbMatriz1multi;
     private javax.swing.JComboBox<String> cbMatriz2Multi;
     private javax.swing.JComboBox<String> cbMatriz2Suma;
+    private javax.swing.JComboBox<String> cbMatrizSuma1_1;
     private javax.swing.JFrame formDeterminante;
     private javax.swing.JFrame formIntermedia;
     private javax.swing.JFrame formMultiplicacion;
