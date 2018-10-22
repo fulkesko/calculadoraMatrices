@@ -1,36 +1,44 @@
 package main;
 
+import java.awt.Choice;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.xml.bind.DatatypeConverter;
 
 public class MenuPrincipal extends javax.swing.JFrame {
+
+    JTextField matrizSuma1[][], matrizSuma2[][], matrizMulti1[][], matrizMulti2[][];
 
     public MenuPrincipal() {
         initComponents();
         setLocationRelativeTo(null); // centra el formulario
         setTitle("Calculadora");
-        //  matriz1suma();
+        matriz1();
 
     }
 
-    /*  public void matriz1suma() {
-        scrMatriz1Suma.setLayout(null);
+    public void matriz1() {
 
-        int f, c;
-        JTextField hola1 = new JTextField("prueba 1");
-        cbMatriz1Suma.addItem("");
-        cbMatrizSuma1_1.addItem("");
+        //scrMatriz1Suma.setLayout(null);
+        int fila, columna;
 
-        for (int i = 0; i < 5; i++) {
-            cbMatriz1Suma.addItem("" + (i + 1));
-            cbMatrizSuma1_1.addItem("" + (i + 1));
+        chMatrizC1.addItem("");
+        chMatrizF1.addItem("");
+        for (int i = 0; i < 6; i++) {
+
+            chMatrizC1.addItem("" + (i + 1));
+            chMatrizF1.addItem("" + (i + 1));
 
         }
-        
-     
+        chMatrizC1.setBounds(70, 255, 35, 20);
+        chMatrizF1.setBounds(145, 255, 35, 20);
+
+        //seguir aca con la accion prro
     }
-     */
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -40,13 +48,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         scrMatriz1Suma = new javax.swing.JScrollPane();
         jLabel3 = new javax.swing.JLabel();
         scrMatriz2Suma = new javax.swing.JScrollPane();
-        cbMatriz1Suma = new javax.swing.JComboBox<>();
-        cbMatriz2Suma = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         scrMatriz3Suma = new javax.swing.JScrollPane();
         btnSumar = new javax.swing.JButton();
         btnResta = new javax.swing.JButton();
-        cbMatrizSuma1_1 = new javax.swing.JComboBox<>();
+        chMatrizF1 = new java.awt.Choice();
+        chMatrizC1 = new java.awt.Choice();
+        chMatrizF2 = new java.awt.Choice();
+        chMatrizC2 = new java.awt.Choice();
         formMultiplicacion = new javax.swing.JFrame();
         pnlMultiplica = new javax.swing.JPanel();
         scrMatriz1Multi = new javax.swing.JScrollPane();
@@ -58,11 +67,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         scrMatriz3Multi = new javax.swing.JScrollPane();
         jLabel10 = new javax.swing.JLabel();
-        formIntermedia = new javax.swing.JFrame();
-        pnlIntermedia = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         formDeterminante = new javax.swing.JFrame();
         pnlDeterminante = new javax.swing.JPanel();
         pnlMenuPrincipal = new javax.swing.JPanel();
@@ -103,53 +107,59 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlAdicionLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(pnlAdicionLayout.createSequentialGroup()
+                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlAdicionLayout.createSequentialGroup()
                                 .addComponent(jLabel3)
+                                .addGap(23, 23, 23)
+                                .addComponent(chMatrizF1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cbMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(cbMatrizSuma1_1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(chMatrizC1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addComponent(scrMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnSumar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnResta, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrMatriz2Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlAdicionLayout.createSequentialGroup()
                                 .addComponent(jLabel7)
-                                .addGap(26, 26, 26)
-                                .addComponent(cbMatriz2Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(scrMatriz2Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(27, 27, 27)
+                                .addComponent(chMatrizF2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(chMatrizC2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(pnlAdicionLayout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addComponent(scrMatriz3Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         pnlAdicionLayout.setVerticalGroup(
             pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAdicionLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlAdicionLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAdicionLayout.createSequentialGroup()
+                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(chMatrizF1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3)
-                            .addComponent(cbMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(cbMatrizSuma1_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(42, 42, 42)
-                        .addComponent(btnSumar)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnResta))
-                    .addGroup(pnlAdicionLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(cbMatriz2Suma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chMatrizC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(scrMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlAdicionLayout.createSequentialGroup()
+                        .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel7)
+                            .addComponent(chMatrizF2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(chMatrizC2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(pnlAdicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrMatriz2Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(scrMatriz1Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(pnlAdicionLayout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addComponent(btnSumar)
+                                .addGap(35, 35, 35)
+                                .addComponent(btnResta))
+                            .addGroup(pnlAdicionLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(scrMatriz2Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(24, 24, 24)
                 .addComponent(scrMatriz3Suma, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
@@ -158,21 +168,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
         formSuma.getContentPane().setLayout(formSumaLayout);
         formSumaLayout.setHorizontalGroup(
             formSumaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 450, Short.MAX_VALUE)
-            .addGroup(formSumaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(formSumaLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlAdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(pnlAdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         formSumaLayout.setVerticalGroup(
             formSumaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 463, Short.MAX_VALUE)
-            .addGroup(formSumaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(formSumaLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlAdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(formSumaLayout.createSequentialGroup()
+                .addComponent(pnlAdicion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
         formMultiplicacion.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -278,68 +280,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        formIntermedia.addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(java.awt.event.WindowEvent evt) {
-                formIntermediaWindowClosing(evt);
-            }
-        });
-
-        pnlIntermedia.setBorder(javax.swing.BorderFactory.createTitledBorder("Propiedades"));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel6.setText("tipo de matriz");
-
-        jButton1.setText("Generar");
-
-        javax.swing.GroupLayout pnlIntermediaLayout = new javax.swing.GroupLayout(pnlIntermedia);
-        pnlIntermedia.setLayout(pnlIntermediaLayout);
-        pnlIntermediaLayout.setHorizontalGroup(
-            pnlIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlIntermediaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(pnlIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addContainerGap(283, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlIntermediaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-        );
-        pnlIntermediaLayout.setVerticalGroup(
-            pnlIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlIntermediaLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(26, 26, 26))
-        );
-
-        javax.swing.GroupLayout formIntermediaLayout = new javax.swing.GroupLayout(formIntermedia.getContentPane());
-        formIntermedia.getContentPane().setLayout(formIntermediaLayout);
-        formIntermediaLayout.setHorizontalGroup(
-            formIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-            .addGroup(formIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(formIntermediaLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlIntermedia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        formIntermediaLayout.setVerticalGroup(
-            formIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-            .addGroup(formIntermediaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(formIntermediaLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(pnlIntermedia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
         formDeterminante.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formDeterminanteWindowClosing(evt);
@@ -428,7 +368,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnSuma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlMenuPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 264, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -478,14 +418,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnSumaActionPerformed
 
-    private void btnMultiplicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicaActionPerformed
-        formMultiplicacion.setBounds(0, 0, 650, 530);
-        formMultiplicacion.setLocationRelativeTo(null);
-        formMultiplicacion.setVisible(true);
-        this.setVisible(false);
-
-    }//GEN-LAST:event_btnMultiplicaActionPerformed
-
     private void btnDeterminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeterminaActionPerformed
         formDeterminante.setBounds(0, 0, 650, 530);
         formDeterminante.setLocationRelativeTo(null);
@@ -494,25 +426,28 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnDeterminaActionPerformed
 
-    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnSumarActionPerformed
+    private void formDeterminanteWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formDeterminanteWindowClosing
+        salir();
+    }//GEN-LAST:event_formDeterminanteWindowClosing
 
     private void formSumaWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formSumaWindowClosing
         salir();
     }//GEN-LAST:event_formSumaWindowClosing
 
+    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSumarActionPerformed
+
+    private void btnMultiplicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicaActionPerformed
+        formMultiplicacion.setBounds(0, 0, 650, 530);
+        formMultiplicacion.setLocationRelativeTo(null);
+        formMultiplicacion.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnMultiplicaActionPerformed
+
     private void formMultiplicacionWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formMultiplicacionWindowClosing
         salir();
     }//GEN-LAST:event_formMultiplicacionWindowClosing
-
-    private void formIntermediaWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formIntermediaWindowClosing
-        salir();
-    }//GEN-LAST:event_formIntermediaWindowClosing
-
-    private void formDeterminanteWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formDeterminanteWindowClosing
-        salir();
-    }//GEN-LAST:event_formDeterminanteWindowClosing
 
     /**
      * @param args the command line arguments
@@ -557,31 +492,27 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnResta;
     private javax.swing.JButton btnSuma;
     private javax.swing.JButton btnSumar;
-    private javax.swing.JComboBox<String> cbMatriz1Suma;
     private javax.swing.JComboBox<String> cbMatriz1multi;
     private javax.swing.JComboBox<String> cbMatriz2Multi;
-    private javax.swing.JComboBox<String> cbMatriz2Suma;
-    private javax.swing.JComboBox<String> cbMatrizSuma1_1;
+    private java.awt.Choice chMatrizC1;
+    private java.awt.Choice chMatrizC2;
+    private java.awt.Choice chMatrizF1;
+    private java.awt.Choice chMatrizF2;
     private javax.swing.JFrame formDeterminante;
-    private javax.swing.JFrame formIntermedia;
     private javax.swing.JFrame formMultiplicacion;
     private javax.swing.JFrame formSuma;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel pnlAdicion;
     private javax.swing.JPanel pnlDeterminante;
-    private javax.swing.JPanel pnlIntermedia;
     private javax.swing.JPanel pnlMenuPrincipal;
     private javax.swing.JPanel pnlMultiplica;
     private javax.swing.JScrollPane scrMatriz1Multi;
@@ -607,4 +538,64 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     }
 
+    private void generarMatriz1(int fila, int columna) {
+        int x = 50, y = 5;
+
+        matrizSuma1 = new JTextField[fila][columna];
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                matrizSuma1[i][j] = new JTextField("");
+                matrizSuma1[i][j].setBounds(x, y, 50, 30);
+                matrizSuma1[i][j].setHorizontalAlignment(JTextField.RIGHT);
+
+                x += 45;
+            }
+            x = 50;
+            y += 35;
+        }
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                scrMatriz1Suma.add(matrizSuma1[i][j]);
+                matrizSuma1[i][j].setVisible(false);
+            }
+
+        }
+        for (int i = 0; i < fila; i++) {
+            for (int j = 0; j < columna; j++) {
+                matrizSuma1[i][j].setVisible(true);
+            }
+        }
+        formSuma.pack();
+
+    }
+
+    public class EjecutarChoice implements ItemListener {
+
+        @Override
+        public void itemStateChanged(ItemEvent e) {
+            int fila, columna;
+
+            if (e.getSource() == chMatrizF1) {
+                //validacion de espacios vacios
+                if (chMatrizC1.getSelectedIndex() != 0 && chMatrizF1.getSelectedIndex() != 0) {
+                    fila = Integer.parseInt(chMatrizC1.getSelectedItem());
+                    columna = Integer.parseInt(chMatrizF1.getSelectedItem());
+                    if (matrizSuma1 != null) {
+                        for (int i = 0; i < matrizSuma1.length; i++) {
+                            for (int j = 0; j < matrizSuma1[0].length; j++) {
+                                matrizSuma1[i][j].setVisible(false);
+                            }
+                        }
+                        matrizSuma1 = null;
+                        generarMatriz1(fila, columna);
+                    } else {
+                        generarMatriz1(fila, columna);
+
+                    }//else if(e.getSource() == ){
+                       //     }
+                }
+            }
+
+        }
+    }
 }
