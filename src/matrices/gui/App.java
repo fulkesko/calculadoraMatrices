@@ -10,6 +10,7 @@ public class App extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setTitle("Calculadora");
         dejarOcultas();
+        dejarOcultasM();
         agregar_datos();
         pnlSumatoria.updateUI();
 
@@ -21,7 +22,6 @@ public class App extends javax.swing.JFrame {
         java.awt.GridBagConstraints gridBagConstraints;
 
         Sumatoria = new javax.swing.JFrame();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
         pnlSumatoria = new javax.swing.JPanel();
         cbMatrizSum2 = new javax.swing.JComboBox<>();
         jLayeredPane2 = new javax.swing.JLayeredPane();
@@ -60,10 +60,39 @@ public class App extends javax.swing.JFrame {
         cbMatrizSum1 = new javax.swing.JComboBox<>();
         Multi = new javax.swing.JFrame();
         pnlMultiplicacion = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        cbMatrizM1 = new javax.swing.JComboBox<>();
+        cbMatrizM2 = new javax.swing.JComboBox<>();
+        jLayeredPane6 = new javax.swing.JLayeredPane();
+        txtMatrizAM11 = new javax.swing.JTextField();
+        txtMatrizAM21 = new javax.swing.JTextField();
+        txtMatrizAM31 = new javax.swing.JTextField();
+        txtMatrizAM13 = new javax.swing.JTextField();
+        txtMatrizAM12 = new javax.swing.JTextField();
+        txtMatrizAM23 = new javax.swing.JTextField();
+        txtMatrizAM22 = new javax.swing.JTextField();
+        txtMatrizAM32 = new javax.swing.JTextField();
+        txtMatrizAM33 = new javax.swing.JTextField();
+        jLayeredPane7 = new javax.swing.JLayeredPane();
+        txtMatrizBM11 = new javax.swing.JTextField();
+        txtMatrizBM21 = new javax.swing.JTextField();
+        txtMatrizBM31 = new javax.swing.JTextField();
+        txtMatrizBM13 = new javax.swing.JTextField();
+        txtMatrizBM12 = new javax.swing.JTextField();
+        txtMatrizBM23 = new javax.swing.JTextField();
+        txtMatrizBM22 = new javax.swing.JTextField();
+        txtMatrizBM32 = new javax.swing.JTextField();
+        txtMatrizBM33 = new javax.swing.JTextField();
+        jLayeredPane8 = new javax.swing.JLayeredPane();
+        txtMatrizCM11 = new javax.swing.JTextField();
+        txtMatrizCM21 = new javax.swing.JTextField();
+        txtMatrizCM31 = new javax.swing.JTextField();
+        txtMatrizCM13 = new javax.swing.JTextField();
+        txtMatrizCM12 = new javax.swing.JTextField();
+        txtMatrizCM23 = new javax.swing.JTextField();
+        txtMatrizCM22 = new javax.swing.JTextField();
+        txtMatrizCM32 = new javax.swing.JTextField();
+        txtMatrizCM33 = new javax.swing.JTextField();
+        btnMulti = new javax.swing.JButton();
         Determinante = new javax.swing.JFrame();
         pnlDeterminante = new javax.swing.JPanel();
         menuPrincipal = new javax.swing.JPanel();
@@ -74,26 +103,13 @@ public class App extends javax.swing.JFrame {
 
         Sumatoria.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         Sumatoria.setTitle("Sumatoria");
-        Sumatoria.setMaximumSize(new java.awt.Dimension(500, 500));
         Sumatoria.setMinimumSize(new java.awt.Dimension(100, 100));
-        Sumatoria.setPreferredSize(new java.awt.Dimension(500, 500));
         Sumatoria.setSize(new java.awt.Dimension(400, 400));
         Sumatoria.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 SumatoriaWindowClosing(evt);
             }
         });
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         pnlSumatoria.setPreferredSize(new java.awt.Dimension(435, 400));
 
@@ -281,7 +297,7 @@ public class App extends javax.swing.JFrame {
                     .addGroup(pnlSumatoriaLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         pnlSumatoriaLayout.setVerticalGroup(
             pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,19 +320,13 @@ public class App extends javax.swing.JFrame {
         Sumatoria.getContentPane().setLayout(SumatoriaLayout);
         SumatoriaLayout.setHorizontalGroup(
             SumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SumatoriaLayout.createSequentialGroup()
-                .addGap(96, 96, 96)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(pnlSumatoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         SumatoriaLayout.setVerticalGroup(
             SumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SumatoriaLayout.createSequentialGroup()
                 .addComponent(pnlSumatoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         Multi.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -325,13 +335,288 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setText("jLabel5");
+        cbMatrizM1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMatrizM1ActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbMatrizM2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMatrizM2ActionPerformed(evt);
+            }
+        });
 
-        jLabel6.setText("jLabel6");
+        jLayeredPane6.setBorder(javax.swing.BorderFactory.createTitledBorder("Matriz 1"));
+        jLayeredPane6.setPreferredSize(new java.awt.Dimension(151, 129));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        txtMatrizAM11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM11.setText("0");
+
+        txtMatrizAM21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM21.setText("0");
+
+        txtMatrizAM31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM31.setText("0");
+
+        txtMatrizAM13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM13.setText("0");
+
+        txtMatrizAM12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM12.setText("0");
+
+        txtMatrizAM23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM23.setText("0");
+
+        txtMatrizAM22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM22.setText("0");
+
+        txtMatrizAM32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM32.setText("0");
+
+        txtMatrizAM33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizAM33.setText("0");
+
+        jLayeredPane6.setLayer(txtMatrizAM11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM21, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM31, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM23, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM22, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM32, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane6.setLayer(txtMatrizAM33, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane6Layout = new javax.swing.GroupLayout(jLayeredPane6);
+        jLayeredPane6.setLayout(jLayeredPane6Layout);
+        jLayeredPane6Layout.setHorizontalGroup(
+            jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                        .addComponent(txtMatrizAM31, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizAM32, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizAM33, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                        .addComponent(txtMatrizAM21, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizAM22, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizAM23, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                        .addComponent(txtMatrizAM11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizAM12, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizAM13, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jLayeredPane6Layout.setVerticalGroup(
+            jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizAM11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizAM12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizAM13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizAM21, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizAM22, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizAM23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizAM31, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizAM32, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizAM33, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jLayeredPane7.setBorder(javax.swing.BorderFactory.createTitledBorder("Matriz 2"));
+        jLayeredPane7.setPreferredSize(new java.awt.Dimension(151, 129));
+
+        txtMatrizBM11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM11.setText("0");
+
+        txtMatrizBM21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM21.setText("0");
+
+        txtMatrizBM31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM31.setText("0");
+
+        txtMatrizBM13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM13.setText("0");
+
+        txtMatrizBM12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM12.setText("0");
+
+        txtMatrizBM23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM23.setText("0");
+
+        txtMatrizBM22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM22.setText("0");
+
+        txtMatrizBM32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM32.setText("0");
+
+        txtMatrizBM33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizBM33.setText("0");
+
+        jLayeredPane7.setLayer(txtMatrizBM11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM21, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM31, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM23, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM22, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM32, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane7.setLayer(txtMatrizBM33, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane7Layout = new javax.swing.GroupLayout(jLayeredPane7);
+        jLayeredPane7.setLayout(jLayeredPane7Layout);
+        jLayeredPane7Layout.setHorizontalGroup(
+            jLayeredPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane7Layout.createSequentialGroup()
+                        .addComponent(txtMatrizBM31, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizBM32, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizBM33, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane7Layout.createSequentialGroup()
+                        .addComponent(txtMatrizBM21, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizBM22, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizBM23, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane7Layout.createSequentialGroup()
+                        .addComponent(txtMatrizBM11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizBM12, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizBM13, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+        jLayeredPane7Layout.setVerticalGroup(
+            jLayeredPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizBM11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizBM12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizBM13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizBM21, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizBM22, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizBM23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizBM31, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizBM32, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizBM33, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLayeredPane8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Matriz 3", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        jLayeredPane8.setPreferredSize(new java.awt.Dimension(151, 129));
+
+        txtMatrizCM11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM11.setText("0");
+
+        txtMatrizCM21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM21.setText("0");
+
+        txtMatrizCM31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM31.setText("0");
+
+        txtMatrizCM13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM13.setText("0");
+
+        txtMatrizCM12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM12.setText("0");
+
+        txtMatrizCM23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM23.setText("0");
+
+        txtMatrizCM22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM22.setText("0");
+
+        txtMatrizCM32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM32.setText("0");
+
+        txtMatrizCM33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrizCM33.setText("0");
+
+        jLayeredPane8.setLayer(txtMatrizCM11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM21, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM31, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM23, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM22, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM32, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane8.setLayer(txtMatrizCM33, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane8Layout = new javax.swing.GroupLayout(jLayeredPane8);
+        jLayeredPane8.setLayout(jLayeredPane8Layout);
+        jLayeredPane8Layout.setHorizontalGroup(
+            jLayeredPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane8Layout.createSequentialGroup()
+                        .addComponent(txtMatrizCM31, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizCM32, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizCM33, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane8Layout.createSequentialGroup()
+                        .addComponent(txtMatrizCM21, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizCM22, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizCM23, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane8Layout.createSequentialGroup()
+                        .addComponent(txtMatrizCM11, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizCM12, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrizCM13, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jLayeredPane8Layout.setVerticalGroup(
+            jLayeredPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizCM11, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizCM12, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizCM13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizCM21, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizCM22, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizCM23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrizCM31, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizCM32, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrizCM33, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        btnMulti.setText("*");
+        btnMulti.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlMultiplicacionLayout = new javax.swing.GroupLayout(pnlMultiplicacion);
         pnlMultiplicacion.setLayout(pnlMultiplicacionLayout);
@@ -339,32 +624,47 @@ public class App extends javax.swing.JFrame {
             pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addComponent(jLabel5)
-                .addGap(60, 60, 60)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(jLabel6)
-                .addGap(60, 60, 60)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cbMatrizM1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLayeredPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLayeredPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbMatrizM2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jLayeredPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(btnMulti)
+                .addGap(60, 60, 60))
         );
         pnlMultiplicacionLayout.setVerticalGroup(
             pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(313, Short.MAX_VALUE))
+                    .addComponent(cbMatrizM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbMatrizM2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLayeredPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                    .addComponent(jLayeredPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLayeredPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(btnMulti)))
+                .addGap(41, 41, 41))
         );
 
         javax.swing.GroupLayout MultiLayout = new javax.swing.GroupLayout(Multi.getContentPane());
         Multi.getContentPane().setLayout(MultiLayout);
         MultiLayout.setHorizontalGroup(
             MultiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlMultiplicacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlMultiplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         MultiLayout.setVerticalGroup(
             MultiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -404,10 +704,8 @@ public class App extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setLocation(new java.awt.Point(0, 0));
-        setMaximumSize(new java.awt.Dimension(500, 500));
         setMinimumSize(new java.awt.Dimension(100, 100));
         setName("menuPrincipal"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(250, 240));
 
         menuPrincipal.setMaximumSize(new java.awt.Dimension(500, 500));
         menuPrincipal.setPreferredSize(new java.awt.Dimension(150, 250));
@@ -550,61 +848,61 @@ public class App extends javax.swing.JFrame {
     private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
         String m1 = cbMatrizSum1.getSelectedItem().toString();
         String m2 = cbMatrizSum2.getSelectedItem().toString();
-        
-        if (m1 == m2){
-                
-        int[][] a = new int[3][3];
-        a[0][0] = Integer.parseInt(txtA11.getText());
-        a[0][1] = Integer.parseInt(txtA12.getText());
-        a[0][2] = Integer.parseInt(txtA13.getText());
-        a[1][0] = Integer.parseInt(txtA21.getText());
-        a[1][1] = Integer.parseInt(txtA22.getText());
-        a[1][2] = Integer.parseInt(txtA23.getText());
-        a[2][0] = Integer.parseInt(txtA31.getText());
-        a[2][1] = Integer.parseInt(txtA32.getText());
-        a[2][2] = Integer.parseInt(txtA33.getText());
 
-        int[][] b = new int[3][3];
-        b[0][0] = Integer.parseInt(txtB11.getText());
-        b[0][1] = Integer.parseInt(txtB12.getText());
-        b[0][2] = Integer.parseInt(txtB13.getText());
-        b[1][0] = Integer.parseInt(txtB21.getText());
-        b[1][1] = Integer.parseInt(txtB22.getText());
-        b[1][2] = Integer.parseInt(txtB23.getText());
-        b[2][0] = Integer.parseInt(txtB31.getText());
-        b[2][1] = Integer.parseInt(txtB32.getText());
-        b[2][2] = Integer.parseInt(txtB33.getText());
+        if (m1 == m2) {
 
-        int[][] c = new int[3][3];
+            int[][] a = new int[3][3];
+            a[0][0] = Integer.parseInt(txtA11.getText());
+            a[0][1] = Integer.parseInt(txtA12.getText());
+            a[0][2] = Integer.parseInt(txtA13.getText());
+            a[1][0] = Integer.parseInt(txtA21.getText());
+            a[1][1] = Integer.parseInt(txtA22.getText());
+            a[1][2] = Integer.parseInt(txtA23.getText());
+            a[2][0] = Integer.parseInt(txtA31.getText());
+            a[2][1] = Integer.parseInt(txtA32.getText());
+            a[2][2] = Integer.parseInt(txtA33.getText());
 
-        c[0][0] = a[0][0] + b[0][0];
-        c[0][1] = a[0][1] + b[0][1];
-        c[0][2] = a[0][2] + b[0][2];
-        c[1][0] = a[1][0] + b[1][0];
-        c[1][1] = a[1][1] + b[1][1];
-        c[1][2] = a[1][2] + b[1][2];
-        c[2][0] = a[2][0] + b[2][0];
-        c[2][1] = a[2][1] + b[2][1];
-        c[2][2] = a[2][2] + b[2][2];
+            int[][] b = new int[3][3];
+            b[0][0] = Integer.parseInt(txtB11.getText());
+            b[0][1] = Integer.parseInt(txtB12.getText());
+            b[0][2] = Integer.parseInt(txtB13.getText());
+            b[1][0] = Integer.parseInt(txtB21.getText());
+            b[1][1] = Integer.parseInt(txtB22.getText());
+            b[1][2] = Integer.parseInt(txtB23.getText());
+            b[2][0] = Integer.parseInt(txtB31.getText());
+            b[2][1] = Integer.parseInt(txtB32.getText());
+            b[2][2] = Integer.parseInt(txtB33.getText());
 
-        //seteo de texto
-        txtC11.setText(String.valueOf(c[0][0]));
-        txtC12.setText(String.valueOf(c[0][1]));
-        txtC13.setText(String.valueOf(c[0][2]));
-        txtC21.setText(String.valueOf(c[1][0]));
-        txtC22.setText(String.valueOf(c[1][1]));
-        txtC23.setText(String.valueOf(c[1][2]));
-        txtC31.setText(String.valueOf(c[2][0]));
-        txtC32.setText(String.valueOf(c[2][1]));
-        txtC33.setText(String.valueOf(c[2][2]));
-        }else{//JOptionPane.showConfirmDialog(this, "volver a menu principal", "mensaje", JOptionPane.YES_NO_OPTION
-            JOptionPane.showMessageDialog(this,"solo las matrices de mismo orden se pueden sumar o restar","alerta", JOptionPane.YES_OPTION);
+            int[][] c = new int[3][3];
+
+            c[0][0] = a[0][0] + b[0][0];
+            c[0][1] = a[0][1] + b[0][1];
+            c[0][2] = a[0][2] + b[0][2];
+            c[1][0] = a[1][0] + b[1][0];
+            c[1][1] = a[1][1] + b[1][1];
+            c[1][2] = a[1][2] + b[1][2];
+            c[2][0] = a[2][0] + b[2][0];
+            c[2][1] = a[2][1] + b[2][1];
+            c[2][2] = a[2][2] + b[2][2];
+
+            //seteo de texto
+            txtC11.setText(String.valueOf(c[0][0]));
+            txtC12.setText(String.valueOf(c[0][1]));
+            txtC13.setText(String.valueOf(c[0][2]));
+            txtC21.setText(String.valueOf(c[1][0]));
+            txtC22.setText(String.valueOf(c[1][1]));
+            txtC23.setText(String.valueOf(c[1][2]));
+            txtC31.setText(String.valueOf(c[2][0]));
+            txtC32.setText(String.valueOf(c[2][1]));
+            txtC33.setText(String.valueOf(c[2][2]));
+        } else {//JOptionPane.showConfirmDialog(this, "volver a menu principal", "mensaje", JOptionPane.YES_NO_OPTION
+            JOptionPane.showMessageDialog(this, "solo las matrices de mismo orden se pueden sumar o restar", "alerta", JOptionPane.YES_OPTION);
         }
         //hacer visible la respuesta
         String opc = cbMatrizSum1.getSelectedItem().toString();
         visible_respuesta(opc);
-        
-        
+
+
     }//GEN-LAST:event_btnSumarActionPerformed
 
     private void cbMatrizSum2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMatrizSum2ActionPerformed
@@ -624,6 +922,20 @@ public class App extends javax.swing.JFrame {
         Multi.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnMultiplicacionActionPerformed
+
+    private void cbMatrizM1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMatrizM1ActionPerformed
+        String opc = cbMatrizM1.getSelectedItem().toString();
+        dejarvisibleM1(opc);
+    }//GEN-LAST:event_cbMatrizM1ActionPerformed
+
+    private void cbMatrizM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMatrizM2ActionPerformed
+        String opc = cbMatrizM2.getSelectedItem().toString();
+        dejarvisibleM2(opc);
+    }//GEN-LAST:event_cbMatrizM2ActionPerformed
+
+    private void btnMultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiActionPerformed
+        
+    }//GEN-LAST:event_btnMultiActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -662,22 +974,23 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JFrame Multi;
     private javax.swing.JFrame Sumatoria;
     private javax.swing.JButton btnDeterminante;
+    private javax.swing.JButton btnMulti;
     private javax.swing.JButton btnMultiplicacion;
     private javax.swing.JButton btnRestar;
     private javax.swing.JButton btnSumar;
     private javax.swing.JButton btnSumatorias;
+    private javax.swing.JComboBox<String> cbMatrizM1;
+    private javax.swing.JComboBox<String> cbMatrizM2;
     private javax.swing.JComboBox<String> cbMatrizSum1;
     private javax.swing.JComboBox<String> cbMatrizSum2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JLayeredPane jLayeredPane3;
     private javax.swing.JLayeredPane jLayeredPane4;
     private javax.swing.JLayeredPane jLayeredPane5;
+    private javax.swing.JLayeredPane jLayeredPane6;
+    private javax.swing.JLayeredPane jLayeredPane7;
+    private javax.swing.JLayeredPane jLayeredPane8;
     private javax.swing.JPanel menuPrincipal;
     private javax.swing.JPanel pnlDeterminante;
     private javax.swing.JPanel pnlMultiplicacion;
@@ -709,6 +1022,33 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTextField txtC31;
     private javax.swing.JTextField txtC32;
     private javax.swing.JTextField txtC33;
+    private javax.swing.JTextField txtMatrizAM11;
+    private javax.swing.JTextField txtMatrizAM12;
+    private javax.swing.JTextField txtMatrizAM13;
+    private javax.swing.JTextField txtMatrizAM21;
+    private javax.swing.JTextField txtMatrizAM22;
+    private javax.swing.JTextField txtMatrizAM23;
+    private javax.swing.JTextField txtMatrizAM31;
+    private javax.swing.JTextField txtMatrizAM32;
+    private javax.swing.JTextField txtMatrizAM33;
+    private javax.swing.JTextField txtMatrizBM11;
+    private javax.swing.JTextField txtMatrizBM12;
+    private javax.swing.JTextField txtMatrizBM13;
+    private javax.swing.JTextField txtMatrizBM21;
+    private javax.swing.JTextField txtMatrizBM22;
+    private javax.swing.JTextField txtMatrizBM23;
+    private javax.swing.JTextField txtMatrizBM31;
+    private javax.swing.JTextField txtMatrizBM32;
+    private javax.swing.JTextField txtMatrizBM33;
+    private javax.swing.JTextField txtMatrizCM11;
+    private javax.swing.JTextField txtMatrizCM12;
+    private javax.swing.JTextField txtMatrizCM13;
+    private javax.swing.JTextField txtMatrizCM21;
+    private javax.swing.JTextField txtMatrizCM22;
+    private javax.swing.JTextField txtMatrizCM23;
+    private javax.swing.JTextField txtMatrizCM31;
+    private javax.swing.JTextField txtMatrizCM32;
+    private javax.swing.JTextField txtMatrizCM33;
     // End of variables declaration//GEN-END:variables
 public void salir() {
         if (JOptionPane.showConfirmDialog(this, "volver a menu principal", "mensaje", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
@@ -723,7 +1063,6 @@ public void salir() {
         m.setLocationRelativeTo(null);
 
         m.setVisible(true);
-        System.out.println("mmm");
 
     }
 
@@ -750,6 +1089,28 @@ public void salir() {
         cbMatrizSum2.addItem("3*1");
         cbMatrizSum2.addItem("3*2");
         cbMatrizSum2.addItem("3*3");
+
+        cbMatrizM1.addItem("");
+        cbMatrizM1.addItem("1*1");
+        cbMatrizM1.addItem("1*2");
+        cbMatrizM1.addItem("1*3");
+        cbMatrizM1.addItem("2*1");
+        cbMatrizM1.addItem("2*2");
+        cbMatrizM1.addItem("2*3");
+        cbMatrizM1.addItem("3*1");
+        cbMatrizM1.addItem("3*2");
+        cbMatrizM1.addItem("3*3");
+
+        cbMatrizM2.addItem("");
+        cbMatrizM2.addItem("1*1");
+        cbMatrizM2.addItem("1*2");
+        cbMatrizM2.addItem("1*3");
+        cbMatrizM2.addItem("2*1");
+        cbMatrizM2.addItem("2*2");
+        cbMatrizM2.addItem("2*3");
+        cbMatrizM2.addItem("3*1");
+        cbMatrizM2.addItem("3*2");
+        cbMatrizM2.addItem("3*3");
     }
 
     public void dejarOcultas() {
@@ -785,340 +1146,589 @@ public void salir() {
 
     }
 
+    public void dejarOcultasM() {
+        txtMatrizAM11.setVisible(false);
+        txtMatrizAM12.setVisible(false);
+        txtMatrizAM13.setVisible(false);
+        txtMatrizAM21.setVisible(false);
+        txtMatrizAM22.setVisible(false);
+        txtMatrizAM23.setVisible(false);
+        txtMatrizAM31.setVisible(false);
+        txtMatrizAM32.setVisible(false);
+        txtMatrizAM33.setVisible(false);
+
+        txtMatrizBM11.setVisible(false);
+        txtMatrizBM12.setVisible(false);
+        txtMatrizBM13.setVisible(false);
+        txtMatrizBM21.setVisible(false);
+        txtMatrizBM22.setVisible(false);
+        txtMatrizBM23.setVisible(false);
+        txtMatrizBM31.setVisible(false);
+        txtMatrizBM32.setVisible(false);
+        txtMatrizBM33.setVisible(false);
+
+        txtMatrizCM11.setVisible(false);
+        txtMatrizCM12.setVisible(false);
+        txtMatrizCM13.setVisible(false);
+        txtMatrizCM21.setVisible(false);
+        txtMatrizCM22.setVisible(false);
+        txtMatrizCM23.setVisible(false);
+        txtMatrizCM31.setVisible(false);
+        txtMatrizCM32.setVisible(false);
+        txtMatrizCM33.setVisible(false);
+    }
+
     public void dejarvisibleM1(String opc) {
 
-        if ("1*1".equals(opc)) {
-            txtA11.setVisible(true);
-            txtA12.setVisible(false);
-            txtA13.setVisible(false);
-            txtA21.setVisible(false);
-            txtA22.setVisible(false);
-            txtA23.setVisible(false);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
+        switch (opc) {
+            case ("1*1"):
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(false);
+                txtMatrizAM12.setVisible(false);
+                txtA13.setVisible(false);
+                txtMatrizAM13.setVisible(false);
+                txtA21.setVisible(false);
+                txtMatrizAM21.setVisible(false);
+                txtA22.setVisible(false);
+                txtMatrizAM22.setVisible(false);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(false);
+                txtMatrizAM31.setVisible(false);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            case ("1*2"):
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(true);
+                txtMatrizAM12.setVisible(true);
+                txtA13.setVisible(false);
+                txtMatrizAM13.setVisible(false);
+                txtA21.setVisible(false);
+                txtMatrizAM21.setVisible(false);
+                txtA22.setVisible(false);
+                txtMatrizAM22.setVisible(false);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(false);
+                txtMatrizAM31.setVisible(false);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            case ("1*3"): {
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(true);
+                txtMatrizAM12.setVisible(true);
+                txtA13.setVisible(true);
+                txtMatrizAM13.setVisible(true);
+                txtA21.setVisible(false);
+                txtMatrizAM21.setVisible(false);
+                txtA22.setVisible(false);
+                txtMatrizAM22.setVisible(false);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(false);
+                txtMatrizAM31.setVisible(false);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*1"): {
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(false);
+                txtMatrizAM12.setVisible(false);
+                txtA13.setVisible(false);
+                txtMatrizAM13.setVisible(false);
+                txtA21.setVisible(true);
+                txtMatrizAM21.setVisible(true);
+                txtA22.setVisible(false);
+                txtMatrizAM22.setVisible(false);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(false);
+                txtMatrizAM31.setVisible(false);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*2"): {
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(true);
+                txtMatrizAM12.setVisible(true);
+                txtA13.setVisible(false);
+                txtMatrizAM13.setVisible(false);
+                txtA21.setVisible(true);
+                txtMatrizAM21.setVisible(true);
+                txtA22.setVisible(true);
+                txtMatrizAM22.setVisible(true);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(false);
+                txtMatrizAM31.setVisible(false);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*3"): {
 
-            pnlSumatoria.updateUI();
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(true);
+                txtMatrizAM12.setVisible(true);
+                txtA13.setVisible(true);
+                txtMatrizAM13.setVisible(true);
+                txtA21.setVisible(true);
+                txtMatrizAM21.setVisible(true);
+                txtA22.setVisible(true);
+                txtMatrizAM22.setVisible(true);
+                txtA23.setVisible(true);
+                txtMatrizAM23.setVisible(true);
+                txtA31.setVisible(false);
+                txtMatrizAM31.setVisible(false);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*1"): {
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(false);
+                txtMatrizAM12.setVisible(false);
+                txtA13.setVisible(false);
+                txtMatrizAM13.setVisible(false);
+                txtA21.setVisible(true);
+                txtMatrizAM21.setVisible(true);
+                txtA22.setVisible(false);
+                txtMatrizAM22.setVisible(false);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(true);
+                txtMatrizAM31.setVisible(true);
+                txtA32.setVisible(false);
+                txtMatrizAM32.setVisible(false);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*2"): {
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(true);
+                txtMatrizAM12.setVisible(true);
+                txtA13.setVisible(false);
+                txtMatrizAM13.setVisible(false);
+                txtA21.setVisible(true);
+                txtMatrizAM21.setVisible(true);
+                txtA22.setVisible(true);
+                txtMatrizAM22.setVisible(true);
+                txtA23.setVisible(false);
+                txtMatrizAM23.setVisible(false);
+                txtA31.setVisible(true);
+                txtMatrizAM31.setVisible(true);
+                txtA32.setVisible(true);
+                txtMatrizAM32.setVisible(true);
+                txtA33.setVisible(false);
+                txtMatrizAM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*3"): {
+                txtA11.setVisible(true);
+                txtMatrizAM11.setVisible(true);
+                txtA12.setVisible(true);
+                txtMatrizAM12.setVisible(true);
+                txtA13.setVisible(true);
+                txtMatrizAM13.setVisible(true);
+                txtA21.setVisible(true);
+                txtMatrizAM21.setVisible(true);
+                txtA22.setVisible(true);
+                txtMatrizAM22.setVisible(true);
+                txtA23.setVisible(true);
+                txtMatrizAM23.setVisible(true);
+                txtA31.setVisible(true);
+                txtMatrizAM31.setVisible(true);
+                txtA32.setVisible(true);
+                txtMatrizAM32.setVisible(true);
+                txtA33.setVisible(true);
+                txtMatrizAM33.setVisible(true);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
         }
-        if (opc == "1*2") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(false);
-            txtA21.setVisible(false);
-            txtA22.setVisible(false);
-            txtA23.setVisible(false);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "1*3") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(true);
-            txtA21.setVisible(false);
-            txtA22.setVisible(false);
-            txtA23.setVisible(false);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*1") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(false);
-            txtA13.setVisible(false);
-            txtA21.setVisible(true);
-            txtA22.setVisible(false);
-            txtA23.setVisible(false);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*2") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(false);
-            txtA21.setVisible(true);
-            txtA22.setVisible(true);
-            txtA23.setVisible(false);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*3") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(true);
-            txtA21.setVisible(true);
-            txtA22.setVisible(true);
-            txtA23.setVisible(true);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "3*1") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(true);
-            txtA21.setVisible(false);
-            txtA22.setVisible(false);
-            txtA23.setVisible(false);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
 
-        }if (opc == "3*2") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(true);
-            txtA21.setVisible(true);
-            txtA22.setVisible(true);
-            txtA23.setVisible(true);
-            txtA31.setVisible(false);
-            txtA32.setVisible(false);
-            txtA33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "3*3") {
-            txtA11.setVisible(true);
-            txtA12.setVisible(true);
-            txtA13.setVisible(true);
-            txtA21.setVisible(true);
-            txtA22.setVisible(true);
-            txtA23.setVisible(true);
-            txtA31.setVisible(true);
-            txtA32.setVisible(true);
-            txtA33.setVisible(true);
-            pnlSumatoria.updateUI();
-        }
     }
+
     public void dejarvisibleM2(String opc) {
 
-        if ("1*1".equals(opc)) {
-            txtB11.setVisible(true);
-            txtB12.setVisible(false);
-            txtB13.setVisible(false);
-            txtB21.setVisible(false);
-            txtB22.setVisible(false);
-            txtB23.setVisible(false);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
+        switch (opc) {
+            case ("1*1"):
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(false);
+                txtMatrizBM12.setVisible(false);
+                txtB13.setVisible(false);
+                txtMatrizBM13.setVisible(false);
+                txtB21.setVisible(false);
+                txtMatrizBM21.setVisible(false);
+                txtB22.setVisible(false);
+                txtMatrizBM22.setVisible(false);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(false);
+                txtMatrizBM31.setVisible(false);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            case ("1*2"):
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(true);
+                txtMatrizBM12.setVisible(true);
+                txtB13.setVisible(false);
+                txtMatrizBM13.setVisible(false);
+                txtB21.setVisible(false);
+                txtMatrizBM21.setVisible(false);
+                txtB22.setVisible(false);
+                txtMatrizBM22.setVisible(false);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(false);
+                txtMatrizBM31.setVisible(false);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            case ("1*3"): {
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(true);
+                txtMatrizBM12.setVisible(true);
+                txtB13.setVisible(true);
+                txtMatrizBM13.setVisible(true);
+                txtB21.setVisible(false);
+                txtMatrizBM21.setVisible(false);
+                txtB22.setVisible(false);
+                txtMatrizBM22.setVisible(false);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(false);
+                txtMatrizBM31.setVisible(false);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*1"): {
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(false);
+                txtMatrizBM12.setVisible(false);
+                txtB13.setVisible(false);
+                txtMatrizBM13.setVisible(false);
+                txtB21.setVisible(true);
+                txtMatrizBM21.setVisible(true);
+                txtB22.setVisible(false);
+                txtMatrizBM22.setVisible(false);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(false);
+                txtMatrizBM31.setVisible(false);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*2"): {
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(true);
+                txtMatrizBM12.setVisible(true);
+                txtB13.setVisible(false);
+                txtMatrizBM13.setVisible(false);
+                txtB21.setVisible(true);
+                txtMatrizBM21.setVisible(true);
+                txtB22.setVisible(true);
+                txtMatrizBM22.setVisible(true);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(false);
+                txtMatrizBM31.setVisible(false);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*3"): {
 
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "1*2") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(false);
-            txtB21.setVisible(false);
-            txtB22.setVisible(false);
-            txtB23.setVisible(false);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "1*3") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(true);
-            txtB21.setVisible(false);
-            txtB22.setVisible(false);
-            txtB23.setVisible(false);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*1") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(false);
-            txtB13.setVisible(false);
-            txtB21.setVisible(true);
-            txtB22.setVisible(false);
-            txtB23.setVisible(false);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*2") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(false);
-            txtB21.setVisible(true);
-            txtB22.setVisible(true);
-            txtB23.setVisible(false);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*3") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(true);
-            txtB21.setVisible(true);
-            txtB22.setVisible(true);
-            txtB23.setVisible(true);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "3*1") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(true);
-            txtB21.setVisible(false);
-            txtB22.setVisible(false);
-            txtB23.setVisible(false);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-
-        }if (opc == "3*2") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(true);
-            txtB21.setVisible(true);
-            txtB22.setVisible(true);
-            txtB23.setVisible(true);
-            txtB31.setVisible(false);
-            txtB32.setVisible(false);
-            txtB33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "3*3") {
-            txtB11.setVisible(true);
-            txtB12.setVisible(true);
-            txtB13.setVisible(true);
-            txtB21.setVisible(true);
-            txtB22.setVisible(true);
-            txtB23.setVisible(true);
-            txtB31.setVisible(true);
-            txtB32.setVisible(true);
-            txtB33.setVisible(true);
-            pnlSumatoria.updateUI();
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(true);
+                txtMatrizBM12.setVisible(true);
+                txtB13.setVisible(true);
+                txtMatrizBM13.setVisible(true);
+                txtB21.setVisible(true);
+                txtMatrizBM21.setVisible(true);
+                txtB22.setVisible(true);
+                txtMatrizBM22.setVisible(true);
+                txtB23.setVisible(true);
+                txtMatrizBM23.setVisible(true);
+                txtB31.setVisible(false);
+                txtMatrizBM31.setVisible(false);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*1"): {
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(false);
+                txtMatrizBM12.setVisible(false);
+                txtB13.setVisible(false);
+                txtMatrizBM13.setVisible(false);
+                txtB21.setVisible(true);
+                txtMatrizBM21.setVisible(true);
+                txtB22.setVisible(false);
+                txtMatrizBM22.setVisible(false);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(true);
+                txtMatrizBM31.setVisible(true);
+                txtB32.setVisible(false);
+                txtMatrizBM32.setVisible(false);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*2"): {
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(true);
+                txtMatrizBM12.setVisible(true);
+                txtB13.setVisible(false);
+                txtMatrizBM13.setVisible(false);
+                txtB21.setVisible(true);
+                txtMatrizBM21.setVisible(true);
+                txtB22.setVisible(true);
+                txtMatrizBM22.setVisible(true);
+                txtB23.setVisible(false);
+                txtMatrizBM23.setVisible(false);
+                txtB31.setVisible(true);
+                txtMatrizBM31.setVisible(true);
+                txtB32.setVisible(true);
+                txtMatrizBM32.setVisible(true);
+                txtB33.setVisible(false);
+                txtMatrizBM33.setVisible(false);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*3"): {
+                txtB11.setVisible(true);
+                txtMatrizBM11.setVisible(true);
+                txtB12.setVisible(true);
+                txtMatrizBM12.setVisible(true);
+                txtB13.setVisible(true);
+                txtMatrizBM13.setVisible(true);
+                txtB21.setVisible(true);
+                txtMatrizBM21.setVisible(true);
+                txtB22.setVisible(true);
+                txtMatrizBM22.setVisible(true);
+                txtB23.setVisible(true);
+                txtMatrizBM23.setVisible(true);
+                txtB31.setVisible(true);
+                txtMatrizBM31.setVisible(true);
+                txtB32.setVisible(true);
+                txtMatrizBM32.setVisible(true);
+                txtB33.setVisible(true);
+                txtMatrizBM33.setVisible(true);
+                pnlSumatoria.updateUI();
+                pnlMultiplicacion.updateUI();
+                break;
+            }
         }
     }
 
     private void visible_respuesta(String opc) {
-            if ("1*1".equals(opc)) {
-            txtC11.setVisible(true);
-            txtC12.setVisible(false);
-            txtC13.setVisible(false);
-            txtC21.setVisible(false);
-            txtC22.setVisible(false);
-            txtC23.setVisible(false);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
+        switch (opc) {
+            case ("1*1"):
+                txtC11.setVisible(true);
+                txtC12.setVisible(false);
+                txtC13.setVisible(false);
+                txtC21.setVisible(false);
+                txtC22.setVisible(false);
+                txtC23.setVisible(false);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                break;
+            case ("1*2"):
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(false);
+                txtC21.setVisible(false);
+                txtC22.setVisible(false);
+                txtC23.setVisible(false);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            case ("1*3"): {
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(true);
+                txtC21.setVisible(false);
+                txtC22.setVisible(false);
+                txtC23.setVisible(false);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            }
+            case ("2*1"): {
+                txtC11.setVisible(true);
+                txtC12.setVisible(false);
+                txtC13.setVisible(false);
+                txtC21.setVisible(true);
+                txtC22.setVisible(false);
+                txtC23.setVisible(false);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            }
+            case ("2*2"): {
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(false);
+                txtC21.setVisible(true);
+                txtC22.setVisible(true);
+                txtC23.setVisible(false);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            }
+            case ("2*3"): {
 
-            pnlSumatoria.updateUI();
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(true);
+                txtC21.setVisible(true);
+                txtC22.setVisible(true);
+                txtC23.setVisible(true);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            }
+            case ("3*1"): {
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(true);
+                txtC21.setVisible(false);
+                txtC22.setVisible(false);
+                txtC23.setVisible(false);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            }
+            case ("3*2"): {
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(true);
+                txtC21.setVisible(true);
+                txtC22.setVisible(true);
+                txtC23.setVisible(true);
+                txtC31.setVisible(false);
+                txtC32.setVisible(false);
+                txtC33.setVisible(false);
+                pnlSumatoria.updateUI();
+                break;
+            }
+            case ("3*3"): {
+                txtC11.setVisible(true);
+                txtC12.setVisible(true);
+                txtC13.setVisible(true);
+                txtC21.setVisible(true);
+                txtC22.setVisible(true);
+                txtC23.setVisible(true);
+                txtC31.setVisible(true);
+                txtC32.setVisible(true);
+                txtC33.setVisible(true);
+                pnlSumatoria.updateUI();
+                break;
+            }
         }
-        if (opc == "1*2") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(false);
-            txtC21.setVisible(false);
-            txtC22.setVisible(false);
-            txtC23.setVisible(false);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "1*3") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(true);
-            txtC21.setVisible(false);
-            txtC22.setVisible(false);
-            txtC23.setVisible(false);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*1") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(false);
-            txtC13.setVisible(false);
-            txtC21.setVisible(true);
-            txtC22.setVisible(false);
-            txtC23.setVisible(false);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*2") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(false);
-            txtC21.setVisible(true);
-            txtC22.setVisible(true);
-            txtC23.setVisible(false);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "2*3") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(true);
-            txtC21.setVisible(true);
-            txtC22.setVisible(true);
-            txtC23.setVisible(true);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "3*1") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(true);
-            txtC21.setVisible(false);
-            txtC22.setVisible(false);
-            txtC23.setVisible(false);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-
-        }if (opc == "3*2") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(true);
-            txtC21.setVisible(true);
-            txtC22.setVisible(true);
-            txtC23.setVisible(true);
-            txtC31.setVisible(false);
-            txtC32.setVisible(false);
-            txtC33.setVisible(false);
-            pnlSumatoria.updateUI();
-        }
-        if (opc == "3*3") {
-            txtC11.setVisible(true);
-            txtC12.setVisible(true);
-            txtC13.setVisible(true);
-            txtC21.setVisible(true);
-            txtC22.setVisible(true);
-            txtC23.setVisible(true);
-            txtC31.setVisible(true);
-            txtC32.setVisible(true);
-            txtC33.setVisible(true);
-            pnlSumatoria.updateUI();
-        }
+    }
+    
+    private void confirmarMulti(){
+    //cbMatrizSum1.getSelectedItem().toString();
+    //    String m2 = cbMatrizSum2.getSelectedItem().toString();
+    String mm1 = cbMatrizM1.getSelectedItem().toString();
+    String mm2 = cbMatrizM2.getSelectedItem().toString();
+    
+    
     }
 }
