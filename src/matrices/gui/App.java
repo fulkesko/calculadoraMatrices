@@ -9,6 +9,9 @@ public class App extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setTitle("Calculadora");
+        Sumatoria.setTitle("Sumatorias");
+        Multi.setTitle("Multiplicacion");
+        Determinante.setTitle("Determinante");
         dejarOcultas();
         dejarOcultasM();
         agregar_datos();
@@ -103,7 +106,9 @@ public class App extends javax.swing.JFrame {
 
         Sumatoria.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         Sumatoria.setTitle("Sumatoria");
+        Sumatoria.setMaximumSize(new java.awt.Dimension(500, 500));
         Sumatoria.setMinimumSize(new java.awt.Dimension(100, 100));
+        Sumatoria.setPreferredSize(new java.awt.Dimension(500, 500));
         Sumatoria.setSize(new java.awt.Dimension(400, 400));
         Sumatoria.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -297,7 +302,7 @@ public class App extends javax.swing.JFrame {
                     .addGroup(pnlSumatoriaLayout.createSequentialGroup()
                         .addGap(165, 165, 165)
                         .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         pnlSumatoriaLayout.setVerticalGroup(
             pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,13 +325,13 @@ public class App extends javax.swing.JFrame {
         Sumatoria.getContentPane().setLayout(SumatoriaLayout);
         SumatoriaLayout.setHorizontalGroup(
             SumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlSumatoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlSumatoria, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
         SumatoriaLayout.setVerticalGroup(
             SumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SumatoriaLayout.createSequentialGroup()
                 .addComponent(pnlSumatoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
 
         Multi.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -934,7 +939,11 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_cbMatrizM2ActionPerformed
 
     private void btnMultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiActionPerformed
-        
+        boolean confi = confirmarMulti();
+        if (confi = true) {
+            System.out.println("si fuunciona");
+        }
+
     }//GEN-LAST:event_btnMultiActionPerformed
 
     public static void main(String args[]) {
@@ -1722,13 +1731,21 @@ public void salir() {
             }
         }
     }
-    
-    private void confirmarMulti(){
-    //cbMatrizSum1.getSelectedItem().toString();
-    //    String m2 = cbMatrizSum2.getSelectedItem().toString();
-    String mm1 = cbMatrizM1.getSelectedItem().toString();
-    String mm2 = cbMatrizM2.getSelectedItem().toString();
-    
-    
+
+    private boolean confirmarMulti() {
+        //cbMatrizSum1.getSelectedItem().toString();
+        //    String m2 = cbMatrizSum2.getSelectedItem().toString();
+        String mm1 = cbMatrizM1.getSelectedItem().toString();
+        String mm2 = cbMatrizM2.getSelectedItem().toString();
+
+        //(sCadena.charAt(5))
+        if (mm1.charAt(2) == mm2.charAt(0)) {
+            System.out.println("paso");
+            return true;
+
+        } else {
+            System.out.println("no paso");
+            return false;
+        }
     }
 }
