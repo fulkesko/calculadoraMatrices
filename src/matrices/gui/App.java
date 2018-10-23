@@ -243,38 +243,47 @@ public class App extends javax.swing.JFrame {
 
         txtC11.setEditable(false);
         txtC11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC11.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC11, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 35, 30));
 
         txtC12.setEditable(false);
         txtC12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC12.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC12, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 27, 35, 30));
 
         txtC13.setEditable(false);
         txtC13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC13.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC13, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 27, 35, 30));
 
         txtC21.setEditable(false);
         txtC21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC21.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC21, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 63, 35, 30));
 
         txtC22.setEditable(false);
         txtC22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC22.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC22, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 63, 35, 30));
 
         txtC23.setEditable(false);
         txtC23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC23.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC23, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 63, 35, 30));
 
         txtC31.setEditable(false);
         txtC31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC31.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC31, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 99, 35, 30));
 
         txtC32.setEditable(false);
         txtC32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC32.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC32, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 99, 35, 30));
 
         txtC33.setEditable(false);
         txtC33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtC33.setPreferredSize(new java.awt.Dimension(10, 20));
         jLayeredPane5.add(txtC33, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 99, 35, 30));
 
         cbMatrizSum1.addActionListener(new java.awt.event.ActionListener() {
@@ -288,23 +297,22 @@ public class App extends javax.swing.JFrame {
         pnlSumatoriaLayout.setHorizontalGroup(
             pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlSumatoriaLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSumatoriaLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlSumatoriaLayout.createSequentialGroup()
-                                .addComponent(cbMatrizSum1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(89, 89, 89)
-                                .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(24, 24, 24)
-                        .addGroup(pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cbMatrizSum2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(pnlSumatoriaLayout.createSequentialGroup()
-                        .addGap(165, 165, 165)
-                        .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                    .addComponent(cbMatrizSum1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLayeredPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlSumatoriaLayout.createSequentialGroup()
+                        .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(111, 111, 111)
+                        .addComponent(cbMatrizSum2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(59, 59, 59))
+            .addGroup(pnlSumatoriaLayout.createSequentialGroup()
+                .addGap(141, 141, 141)
+                .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlSumatoriaLayout.setVerticalGroup(
             pnlSumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -327,13 +335,11 @@ public class App extends javax.swing.JFrame {
         Sumatoria.getContentPane().setLayout(SumatoriaLayout);
         SumatoriaLayout.setHorizontalGroup(
             SumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlSumatoria, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(pnlSumatoria, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         SumatoriaLayout.setVerticalGroup(
             SumatoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SumatoriaLayout.createSequentialGroup()
-                .addComponent(pnlSumatoria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(100, Short.MAX_VALUE))
+            .addComponent(pnlSumatoria, javax.swing.GroupLayout.PREFERRED_SIZE, 423, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         Multi.addWindowListener(new java.awt.event.WindowAdapter() {
@@ -630,21 +636,21 @@ public class App extends javax.swing.JFrame {
         pnlMultiplicacionLayout.setHorizontalGroup(
             pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cbMatrizM1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLayeredPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLayeredPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbMatrizM2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
                 .addGap(104, 104, 104)
                 .addComponent(jLayeredPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btnMulti)
-                .addGap(60, 60, 60))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLayeredPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbMatrizM1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLayeredPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbMatrizM2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23))
         );
         pnlMultiplicacionLayout.setVerticalGroup(
             pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -653,16 +659,15 @@ public class App extends javax.swing.JFrame {
                 .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbMatrizM1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbMatrizM2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLayeredPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                     .addComponent(jLayeredPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addGroup(pnlMultiplicacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLayeredPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLayeredPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlMultiplicacionLayout.createSequentialGroup()
-                        .addGap(30, 30, 30)
+                        .addGap(10, 10, 10)
                         .addComponent(btnMulti)))
                 .addGap(41, 41, 41))
         );
@@ -1003,7 +1008,7 @@ public class App extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
