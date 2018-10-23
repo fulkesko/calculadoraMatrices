@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 
 public class App extends javax.swing.JFrame {
 
+    int fi, cl, au;
+
     public App() {
         initComponents();
         setLocationRelativeTo(null);
@@ -922,7 +924,7 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_cbMatrizSum1ActionPerformed
 
     private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
-        Multi.setBounds(0, 0, 450, 450);
+        Multi.setBounds(0, 0, 450, 500);
         Multi.setLocationRelativeTo(null);
         Multi.setVisible(true);
         this.setVisible(false);
@@ -940,8 +942,55 @@ public class App extends javax.swing.JFrame {
 
     private void btnMultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiActionPerformed
         boolean confi = confirmarMulti();
-        if (confi = true) {
+        if (confi == true) {
             System.out.println("si fuunciona");
+            visibleMulti();
+            int[][] a = new int[3][3];
+            a[0][0] = Integer.parseInt(txtMatrizAM11.getText());
+            a[0][1] = Integer.parseInt(txtMatrizAM12.getText());
+            a[0][2] = Integer.parseInt(txtMatrizAM13.getText());
+            a[1][0] = Integer.parseInt(txtMatrizAM21.getText());
+            a[1][1] = Integer.parseInt(txtMatrizAM22.getText());
+            a[1][2] = Integer.parseInt(txtMatrizAM23.getText());
+            a[2][0] = Integer.parseInt(txtMatrizAM31.getText());
+            a[2][1] = Integer.parseInt(txtMatrizAM32.getText());
+            a[2][2] = Integer.parseInt(txtMatrizAM33.getText());
+
+            int[][] b = new int[3][3];
+            b[0][0] = Integer.parseInt(txtMatrizBM11.getText());
+            b[0][1] = Integer.parseInt(txtMatrizBM12.getText());
+            b[0][2] = Integer.parseInt(txtMatrizBM13.getText());
+            b[1][0] = Integer.parseInt(txtMatrizBM21.getText());
+            b[1][1] = Integer.parseInt(txtMatrizBM22.getText());
+            b[1][2] = Integer.parseInt(txtMatrizBM23.getText());
+            b[2][0] = Integer.parseInt(txtMatrizBM31.getText());
+            b[2][1] = Integer.parseInt(txtMatrizBM32.getText());
+            b[2][2] = Integer.parseInt(txtMatrizBM33.getText());
+            int[][] c = new int[3][3];
+//i = fi    j =  cl   k = aumento au
+            for (fi = 0; fi <= 2; fi++) {
+                for (cl = 0; cl <= 2; cl++) {
+
+                    for (au = 0; au <= 2; au++) {
+                        for (au = 0; au <= 2; au++) {
+                            c[fi][cl] += a[fi][au] * b[au][cl];
+                        }
+                    }
+                }
+            }
+
+            txtMatrizCM11.setText(String.valueOf(c[0][0]));
+            txtMatrizCM12.setText(String.valueOf(c[0][1]));
+            txtMatrizCM13.setText(String.valueOf(c[0][2]));
+            txtMatrizCM21.setText(String.valueOf(c[1][0]));
+            txtMatrizCM22.setText(String.valueOf(c[1][1]));
+            txtMatrizCM23.setText(String.valueOf(c[1][2]));
+            txtMatrizCM31.setText(String.valueOf(c[2][0]));
+            txtMatrizCM32.setText(String.valueOf(c[2][1]));
+            txtMatrizCM33.setText(String.valueOf(c[2][2]));
+        } else {
+            System.out.println("no debe hacer nada");
+            JOptionPane.showMessageDialog(this, "para multiplicar matrices, la columna de la primera matriz debe ser igual a la fila de la segunda", "Alerta", JOptionPane.YES_OPTION);
         }
 
     }//GEN-LAST:event_btnMultiActionPerformed
@@ -1059,10 +1108,9 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTextField txtMatrizCM32;
     private javax.swing.JTextField txtMatrizCM33;
     // End of variables declaration//GEN-END:variables
-public void salir() {
+    public void salir() {
         if (JOptionPane.showConfirmDialog(this, "volver a menu principal", "mensaje", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             volverMenuPrincipal();
-
         }
     }
 
@@ -1075,7 +1123,7 @@ public void salir() {
 
     }
 
-    public void agregar_datos() {
+    private void agregar_datos() {
 
         cbMatrizSum1.addItem("");
         cbMatrizSum1.addItem("1*1");
@@ -1122,7 +1170,7 @@ public void salir() {
         cbMatrizM2.addItem("3*3");
     }
 
-    public void dejarOcultas() {
+    private void dejarOcultas() {
         txtA11.setVisible(false);
         txtA12.setVisible(false);
         txtA13.setVisible(false);
@@ -1155,7 +1203,7 @@ public void salir() {
 
     }
 
-    public void dejarOcultasM() {
+    private void dejarOcultasM() {
         txtMatrizAM11.setVisible(false);
         txtMatrizAM12.setVisible(false);
         txtMatrizAM13.setVisible(false);
@@ -1187,7 +1235,7 @@ public void salir() {
         txtMatrizCM33.setVisible(false);
     }
 
-    public void dejarvisibleM1(String opc) {
+    private void dejarvisibleM1(String opc) {
 
         switch (opc) {
             case ("1*1"):
@@ -1400,7 +1448,7 @@ public void salir() {
 
     }
 
-    public void dejarvisibleM2(String opc) {
+    private void dejarvisibleM2(String opc) {
 
         switch (opc) {
             case ("1*1"):
@@ -1733,19 +1781,145 @@ public void salir() {
     }
 
     private boolean confirmarMulti() {
-        //cbMatrizSum1.getSelectedItem().toString();
-        //    String m2 = cbMatrizSum2.getSelectedItem().toString();
         String mm1 = cbMatrizM1.getSelectedItem().toString();
         String mm2 = cbMatrizM2.getSelectedItem().toString();
 
-        //(sCadena.charAt(5))
+        //(sCadena.charAt(5)) extraer una letra segun su indice
         if (mm1.charAt(2) == mm2.charAt(0)) {
+            //sout para depurar
             System.out.println("paso");
             return true;
 
         } else {
+            //sout para depurar            
             System.out.println("no paso");
             return false;
         }
+    }
+
+    private void visibleMulti() {
+        String mm1 = cbMatrizM1.getSelectedItem().toString();
+        String mm2 = cbMatrizM2.getSelectedItem().toString();
+        String orden = "" + (mm1.charAt(0)) + "*" + (mm2.charAt(2));
+        System.out.println(orden);
+        switch (orden) {
+            case ("1*1"):
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(false);
+                txtMatrizCM13.setVisible(false);
+                txtMatrizCM21.setVisible(false);
+                txtMatrizCM22.setVisible(false);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(false);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            case ("1*2"):
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(true);
+                txtMatrizCM13.setVisible(false);
+                txtMatrizCM21.setVisible(false);
+                txtMatrizCM22.setVisible(false);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(false);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            case ("1*3"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(true);
+                txtMatrizCM13.setVisible(true);
+                txtMatrizCM21.setVisible(false);
+                txtMatrizCM22.setVisible(false);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(false);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*1"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(false);
+                txtMatrizCM13.setVisible(false);
+                txtMatrizCM21.setVisible(true);
+                txtMatrizCM22.setVisible(false);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(false);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*2"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(true);
+                txtMatrizCM13.setVisible(false);
+                txtMatrizCM21.setVisible(true);
+                txtMatrizCM22.setVisible(true);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(false);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("2*3"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(true);
+                txtMatrizCM13.setVisible(true);
+                txtMatrizCM21.setVisible(true);
+                txtMatrizCM22.setVisible(true);
+                txtMatrizCM23.setVisible(true);
+                txtMatrizCM31.setVisible(false);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*1"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(false);
+                txtMatrizCM13.setVisible(false);
+                txtMatrizCM21.setVisible(true);
+                txtMatrizCM22.setVisible(false);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(true);
+                txtMatrizCM32.setVisible(false);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*2"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(true);
+                txtMatrizCM13.setVisible(false);
+                txtMatrizCM21.setVisible(true);
+                txtMatrizCM22.setVisible(true);
+                txtMatrizCM23.setVisible(false);
+                txtMatrizCM31.setVisible(true);
+                txtMatrizCM32.setVisible(true);
+                txtMatrizCM33.setVisible(false);
+                pnlMultiplicacion.updateUI();
+                break;
+            }
+            case ("3*3"): {
+                txtMatrizCM11.setVisible(true);
+                txtMatrizCM12.setVisible(true);
+                txtMatrizCM13.setVisible(true);
+                txtMatrizCM21.setVisible(true);
+                txtMatrizCM22.setVisible(true);
+                txtMatrizCM23.setVisible(true);
+                txtMatrizCM31.setVisible(true);
+                txtMatrizCM32.setVisible(true);
+                txtMatrizCM33.setVisible(true);
+                pnlMultiplicacion.updateUI();
+                break;
+
+            }
+        }
+
     }
 }
