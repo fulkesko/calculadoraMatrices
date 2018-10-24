@@ -15,9 +15,7 @@ public class App extends javax.swing.JFrame {
         Multi.setTitle("Multiplicacion");
         Determinante.setTitle("Determinante");
         dejarOcultas();
-        dejarOcultasM();
         agregar_datos();
-        pnlSumatoria.updateUI();
 
     }
 
@@ -99,7 +97,22 @@ public class App extends javax.swing.JFrame {
         txtMatrizCM33 = new javax.swing.JTextField();
         btnMulti = new javax.swing.JButton();
         Determinante = new javax.swing.JFrame();
+        jLayeredPane9 = new javax.swing.JLayeredPane();
         pnlDeterminante = new javax.swing.JPanel();
+        cbMatrizDetermina = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        lblDeterminanteResultado = new javax.swing.JLabel();
+        jLayeredPane1 = new javax.swing.JLayeredPane();
+        txtMatrDeter22 = new javax.swing.JTextField();
+        txtMatrDeter11 = new javax.swing.JTextField();
+        txtMatrDeter32 = new javax.swing.JTextField();
+        txtMatrDeter31 = new javax.swing.JTextField();
+        txtMatrDeter13 = new javax.swing.JTextField();
+        txtMatrDeter33 = new javax.swing.JTextField();
+        txtMatrDeter23 = new javax.swing.JTextField();
+        txtMatrDeter12 = new javax.swing.JTextField();
+        txtMatrDeter21 = new javax.swing.JTextField();
+        btnCalcularDeterminante = new javax.swing.JButton();
         menuPrincipal = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnSumatorias = new javax.swing.JButton();
@@ -108,9 +121,7 @@ public class App extends javax.swing.JFrame {
 
         Sumatoria.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         Sumatoria.setTitle("Sumatoria");
-        Sumatoria.setMaximumSize(new java.awt.Dimension(500, 500));
         Sumatoria.setMinimumSize(new java.awt.Dimension(100, 100));
-        Sumatoria.setPreferredSize(new java.awt.Dimension(500, 500));
         Sumatoria.setSize(new java.awt.Dimension(400, 400));
         Sumatoria.addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -166,6 +177,7 @@ public class App extends javax.swing.JFrame {
 
         txtA33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtA33.setText("0");
+        txtA33.setName(""); // NOI18N
         jLayeredPane2.add(txtA33, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 99, 41, 30));
 
         jLayeredPane3.setBorder(javax.swing.BorderFactory.createTitledBorder("Matriz 2"));
@@ -539,30 +551,39 @@ public class App extends javax.swing.JFrame {
         jLayeredPane8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Matriz 3", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
         jLayeredPane8.setPreferredSize(new java.awt.Dimension(151, 129));
 
+        txtMatrizCM11.setEditable(false);
         txtMatrizCM11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM11.setText("0");
 
+        txtMatrizCM21.setEditable(false);
         txtMatrizCM21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM21.setText("0");
 
+        txtMatrizCM31.setEditable(false);
         txtMatrizCM31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM31.setText("0");
 
+        txtMatrizCM13.setEditable(false);
         txtMatrizCM13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM13.setText("0");
 
+        txtMatrizCM12.setEditable(false);
         txtMatrizCM12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM12.setText("0");
 
+        txtMatrizCM23.setEditable(false);
         txtMatrizCM23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM23.setText("0");
 
+        txtMatrizCM22.setEditable(false);
         txtMatrizCM22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM22.setText("0");
 
+        txtMatrizCM32.setEditable(false);
         txtMatrizCM32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM32.setText("0");
 
+        txtMatrizCM33.setEditable(false);
         txtMatrizCM33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtMatrizCM33.setText("0");
 
@@ -691,26 +712,183 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        cbMatrizDetermina.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMatrizDeterminaActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Determinante:");
+
+        lblDeterminanteResultado.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        txtMatrDeter22.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter22.setText("0");
+        txtMatrDeter22.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter11.setText("0");
+        txtMatrDeter11.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter32.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter32.setText("0");
+        txtMatrDeter32.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter31.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter31.setText("0");
+        txtMatrDeter31.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter13.setText("0");
+        txtMatrDeter13.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter33.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter33.setText("0");
+        txtMatrDeter33.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter23.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter23.setText("0");
+        txtMatrDeter23.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter12.setText("0");
+        txtMatrDeter12.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        txtMatrDeter21.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtMatrDeter21.setText("0");
+        txtMatrDeter21.setPreferredSize(new java.awt.Dimension(60, 20));
+
+        jLayeredPane1.setLayer(txtMatrDeter22, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter32, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter31, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter33, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter23, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter12, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(txtMatrDeter21, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+        jLayeredPane1.setLayout(jLayeredPane1Layout);
+        jLayeredPane1Layout.setHorizontalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(txtMatrDeter31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrDeter32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrDeter33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(txtMatrDeter11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrDeter12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrDeter13, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addComponent(txtMatrDeter21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrDeter22, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMatrDeter23, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jLayeredPane1Layout.setVerticalGroup(
+            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrDeter11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrDeter12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrDeter13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatrDeter21, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrDeter22, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMatrDeter23, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtMatrDeter33, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtMatrDeter31, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtMatrDeter32, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+
+        btnCalcularDeterminante.setText("Calcular");
+        btnCalcularDeterminante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularDeterminanteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlDeterminanteLayout = new javax.swing.GroupLayout(pnlDeterminante);
         pnlDeterminante.setLayout(pnlDeterminanteLayout);
         pnlDeterminanteLayout.setHorizontalGroup(
             pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(pnlDeterminanteLayout.createSequentialGroup()
+                .addGroup(pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDeterminanteLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlDeterminanteLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(cbMatrizDetermina, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(66, 66, 66)
+                .addGroup(pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblDeterminanteResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCalcularDeterminante))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
         pnlDeterminanteLayout.setVerticalGroup(
             pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(pnlDeterminanteLayout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addGroup(pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(cbMatrizDetermina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlDeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDeterminanteLayout.createSequentialGroup()
+                        .addComponent(lblDeterminanteResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36)
+                        .addComponent(btnCalcularDeterminante))
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(83, Short.MAX_VALUE))
+        );
+
+        jLayeredPane9.setLayer(pnlDeterminante, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jLayeredPane9Layout = new javax.swing.GroupLayout(jLayeredPane9);
+        jLayeredPane9.setLayout(jLayeredPane9Layout);
+        jLayeredPane9Layout.setHorizontalGroup(
+            jLayeredPane9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlDeterminante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jLayeredPane9Layout.setVerticalGroup(
+            jLayeredPane9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jLayeredPane9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlDeterminante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout DeterminanteLayout = new javax.swing.GroupLayout(Determinante.getContentPane());
         Determinante.getContentPane().setLayout(DeterminanteLayout);
         DeterminanteLayout.setHorizontalGroup(
             DeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlDeterminante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLayeredPane9, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         DeterminanteLayout.setVerticalGroup(
             DeterminanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnlDeterminante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLayeredPane9, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -742,6 +920,11 @@ public class App extends javax.swing.JFrame {
         });
 
         btnDeterminante.setText("Determinante");
+        btnDeterminante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeterminanteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout menuPrincipalLayout = new javax.swing.GroupLayout(menuPrincipal);
         menuPrincipal.setLayout(menuPrincipalLayout);
@@ -811,29 +994,29 @@ public class App extends javax.swing.JFrame {
     }//GEN-LAST:event_DeterminanteWindowClosing
 
     private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
-        int[][] a = new int[3][3];
-        a[0][0] = Integer.parseInt(txtA11.getText());
-        a[0][1] = Integer.parseInt(txtA12.getText());
-        a[0][2] = Integer.parseInt(txtA13.getText());
-        a[1][0] = Integer.parseInt(txtA21.getText());
-        a[1][1] = Integer.parseInt(txtA22.getText());
-        a[1][2] = Integer.parseInt(txtA23.getText());
-        a[2][0] = Integer.parseInt(txtA31.getText());
-        a[2][1] = Integer.parseInt(txtA32.getText());
-        a[2][2] = Integer.parseInt(txtA33.getText());
+        float[][] a = new float[3][3];
+        a[0][0] = Float.valueOf(txtA11.getText());
+        a[0][1] = Float.valueOf(txtA12.getText());
+        a[0][2] = Float.valueOf(txtA13.getText());
+        a[1][0] = Float.valueOf(txtA21.getText());
+        a[1][1] = Float.valueOf(txtA22.getText());
+        a[1][2] = Float.valueOf(txtA23.getText());
+        a[2][0] = Float.valueOf(txtA31.getText());
+        a[2][1] = Float.valueOf(txtA32.getText());
+        a[2][2] = Float.valueOf(txtA33.getText());
 
-        int[][] b = new int[3][3];
-        b[0][0] = Integer.parseInt(txtB11.getText());
-        b[0][1] = Integer.parseInt(txtB12.getText());
-        b[0][2] = Integer.parseInt(txtB13.getText());
-        b[1][0] = Integer.parseInt(txtB21.getText());
-        b[1][1] = Integer.parseInt(txtB22.getText());
-        b[1][2] = Integer.parseInt(txtB23.getText());
-        b[2][0] = Integer.parseInt(txtB31.getText());
-        b[2][1] = Integer.parseInt(txtB32.getText());
-        b[2][2] = Integer.parseInt(txtB33.getText());
+        float[][] b = new float[3][3];
+        b[0][0] = Float.valueOf(txtB11.getText());
+        b[0][1] = Float.valueOf(txtB12.getText());
+        b[0][2] = Float.valueOf(txtB13.getText());
+        b[1][0] = Float.valueOf(txtB21.getText());
+        b[1][1] = Float.valueOf(txtB22.getText());
+        b[1][2] = Float.valueOf(txtB23.getText());
+        b[2][0] = Float.valueOf(txtB31.getText());
+        b[2][1] = Float.valueOf(txtB32.getText());
+        b[2][2] = Float.valueOf(txtB33.getText());
 
-        int[][] c = new int[3][3];
+        float[][] c = new float[3][3];
 
         c[0][0] = a[0][0] - b[0][0];
         c[0][1] = a[0][1] - b[0][1];
@@ -863,29 +1046,29 @@ public class App extends javax.swing.JFrame {
 
         if (m1 == m2) {
 
-            int[][] a = new int[3][3];
-            a[0][0] = Integer.parseInt(txtA11.getText());
-            a[0][1] = Integer.parseInt(txtA12.getText());
-            a[0][2] = Integer.parseInt(txtA13.getText());
-            a[1][0] = Integer.parseInt(txtA21.getText());
-            a[1][1] = Integer.parseInt(txtA22.getText());
-            a[1][2] = Integer.parseInt(txtA23.getText());
-            a[2][0] = Integer.parseInt(txtA31.getText());
-            a[2][1] = Integer.parseInt(txtA32.getText());
-            a[2][2] = Integer.parseInt(txtA33.getText());
+            float[][] a = new float[3][3];
+            a[0][0] = Float.valueOf(txtA11.getText());
+            a[0][1] = Float.valueOf(txtA12.getText());
+            a[0][2] = Float.valueOf(txtA13.getText());
+            a[1][0] = Float.valueOf(txtA21.getText());
+            a[1][1] = Float.valueOf(txtA22.getText());
+            a[1][2] = Float.valueOf(txtA23.getText());
+            a[2][0] = Float.valueOf(txtA31.getText());
+            a[2][1] = Float.valueOf(txtA32.getText());
+            a[2][2] = Float.valueOf(txtA33.getText());
 
-            int[][] b = new int[3][3];
-            b[0][0] = Integer.parseInt(txtB11.getText());
-            b[0][1] = Integer.parseInt(txtB12.getText());
-            b[0][2] = Integer.parseInt(txtB13.getText());
-            b[1][0] = Integer.parseInt(txtB21.getText());
-            b[1][1] = Integer.parseInt(txtB22.getText());
-            b[1][2] = Integer.parseInt(txtB23.getText());
-            b[2][0] = Integer.parseInt(txtB31.getText());
-            b[2][1] = Integer.parseInt(txtB32.getText());
-            b[2][2] = Integer.parseInt(txtB33.getText());
+            float[][] b = new float[3][3];
+            b[0][0] = Float.valueOf(txtB11.getText());
+            b[0][1] = Float.valueOf(txtB12.getText());
+            b[0][2] = Float.valueOf(txtB13.getText());
+            b[1][0] = Float.valueOf(txtB21.getText());
+            b[1][1] = Float.valueOf(txtB22.getText());
+            b[1][2] = Float.valueOf(txtB23.getText());
+            b[2][0] = Float.valueOf(txtB31.getText());
+            b[2][1] = Float.valueOf(txtB32.getText());
+            b[2][2] = Float.valueOf(txtB33.getText());
 
-            int[][] c = new int[3][3];
+            float[][] c = new float[3][3];
 
             c[0][0] = a[0][0] + b[0][0];
             c[0][1] = a[0][1] + b[0][1];
@@ -950,28 +1133,28 @@ public class App extends javax.swing.JFrame {
         if (confi == true) {
             System.out.println("si fuunciona");
             visibleMulti();
-            int[][] a = new int[3][3];
-            a[0][0] = Integer.parseInt(txtMatrizAM11.getText());
-            a[0][1] = Integer.parseInt(txtMatrizAM12.getText());
-            a[0][2] = Integer.parseInt(txtMatrizAM13.getText());
-            a[1][0] = Integer.parseInt(txtMatrizAM21.getText());
-            a[1][1] = Integer.parseInt(txtMatrizAM22.getText());
-            a[1][2] = Integer.parseInt(txtMatrizAM23.getText());
-            a[2][0] = Integer.parseInt(txtMatrizAM31.getText());
-            a[2][1] = Integer.parseInt(txtMatrizAM32.getText());
-            a[2][2] = Integer.parseInt(txtMatrizAM33.getText());
+            float[][] a = new float[3][3];
+            a[0][0] = Float.valueOf(txtMatrizAM11.getText());
+            a[0][1] = Float.valueOf(txtMatrizAM12.getText());
+            a[0][2] = Float.valueOf(txtMatrizAM13.getText());
+            a[1][0] = Float.valueOf(txtMatrizAM21.getText());
+            a[1][1] = Float.valueOf(txtMatrizAM22.getText());
+            a[1][2] = Float.valueOf(txtMatrizAM23.getText());
+            a[2][0] = Float.valueOf(txtMatrizAM31.getText());
+            a[2][1] = Float.valueOf(txtMatrizAM32.getText());
+            a[2][2] = Float.valueOf(txtMatrizAM33.getText());
 
-            int[][] b = new int[3][3];
-            b[0][0] = Integer.parseInt(txtMatrizBM11.getText());
-            b[0][1] = Integer.parseInt(txtMatrizBM12.getText());
-            b[0][2] = Integer.parseInt(txtMatrizBM13.getText());
-            b[1][0] = Integer.parseInt(txtMatrizBM21.getText());
-            b[1][1] = Integer.parseInt(txtMatrizBM22.getText());
-            b[1][2] = Integer.parseInt(txtMatrizBM23.getText());
-            b[2][0] = Integer.parseInt(txtMatrizBM31.getText());
-            b[2][1] = Integer.parseInt(txtMatrizBM32.getText());
-            b[2][2] = Integer.parseInt(txtMatrizBM33.getText());
-            int[][] c = new int[3][3];
+            float[][] b = new float[3][3];
+            b[0][0] = Float.valueOf(txtMatrizBM11.getText());
+            b[0][1] = Float.valueOf(txtMatrizBM12.getText());
+            b[0][2] = Float.valueOf(txtMatrizBM13.getText());
+            b[1][0] = Float.valueOf(txtMatrizBM21.getText());
+            b[1][1] = Float.valueOf(txtMatrizBM22.getText());
+            b[1][2] = Float.valueOf(txtMatrizBM23.getText());
+            b[2][0] = Float.valueOf(txtMatrizBM31.getText());
+            b[2][1] = Float.valueOf(txtMatrizBM32.getText());
+            b[2][2] = Float.valueOf(txtMatrizBM33.getText());
+            float[][] c = new float[3][3];
 //i = fi    j =  cl   k = aumento au
             for (fi = 0; fi <= 2; fi++) {
                 for (cl = 0; cl <= 2; cl++) {
@@ -999,6 +1182,54 @@ public class App extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_btnMultiActionPerformed
+
+    private void cbMatrizDeterminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMatrizDeterminaActionPerformed
+        String opc = cbMatrizDetermina.getSelectedItem().toString();
+        dejarvisibleMD(opc);
+
+    }//GEN-LAST:event_cbMatrizDeterminaActionPerformed
+
+    private void btnDeterminanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeterminanteActionPerformed
+        Determinante.setBounds(0, 0, 450, 450);
+        Determinante.setLocationRelativeTo(null);
+        Determinante.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnDeterminanteActionPerformed
+
+    private void btnCalcularDeterminanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularDeterminanteActionPerformed
+        String opc = cbMatrizDetermina.getSelectedItem().toString();
+        float[][] d1 = new float[2][2];
+        float[][] d2 = new float[3][3];
+        float determinante;
+        switch (opc) {
+            case ("2*2"):
+                d1[0][0] = Float.valueOf(txtMatrDeter11.getText());
+                d1[0][1] = Float.valueOf(txtMatrDeter12.getText());
+                d1[1][0] = Float.valueOf(txtMatrDeter21.getText());
+                d1[1][1] = Float.valueOf(txtMatrDeter22.getText());
+                //por cramer
+                determinante = (d1[0][0] * d1[0][1]) - (d1[1][0] * d1[1][1]);
+                lblDeterminanteResultado.setText(String.valueOf(determinante));
+                break;
+            case ("3*3"):
+
+                d2[0][0] = Float.valueOf(txtMatrDeter11.getText());
+                d2[0][1] = Float.valueOf(txtMatrDeter12.getText());
+                d2[0][2] = Float.valueOf(txtMatrDeter13.getText());
+                d2[1][0] = Float.valueOf(txtMatrDeter21.getText());
+                d2[1][1] = Float.valueOf(txtMatrDeter22.getText());
+                d2[1][2] = Float.valueOf(txtMatrDeter23.getText());
+                d2[2][0] = Float.valueOf(txtMatrDeter31.getText());
+                d2[2][1] = Float.valueOf(txtMatrDeter32.getText());
+                d2[2][2] = Float.valueOf(txtMatrDeter33.getText());
+                //por cramer
+                determinante = d2[0][0] * ((d2[1][1] * d2[2][2]) - (d2[2][1] * d2[1][2])) - d2[0][1] * ((d2[1][0] * d2[2][2]) - (d2[2][0] * d2[1][2])) + d2[0][2] * ((d2[1][0] * d2[2][1]) - (d2[2][0] * d2[1][1]));
+                lblDeterminanteResultado.setText(String.valueOf(determinante));
+                break;
+        }
+
+
+    }//GEN-LAST:event_btnCalcularDeterminanteActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1036,17 +1267,21 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JFrame Determinante;
     private javax.swing.JFrame Multi;
     private javax.swing.JFrame Sumatoria;
+    private javax.swing.JButton btnCalcularDeterminante;
     private javax.swing.JButton btnDeterminante;
     private javax.swing.JButton btnMulti;
     private javax.swing.JButton btnMultiplicacion;
     private javax.swing.JButton btnRestar;
     private javax.swing.JButton btnSumar;
     private javax.swing.JButton btnSumatorias;
+    private javax.swing.JComboBox<String> cbMatrizDetermina;
     private javax.swing.JComboBox<String> cbMatrizM1;
     private javax.swing.JComboBox<String> cbMatrizM2;
     private javax.swing.JComboBox<String> cbMatrizSum1;
     private javax.swing.JComboBox<String> cbMatrizSum2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
     private javax.swing.JLayeredPane jLayeredPane3;
     private javax.swing.JLayeredPane jLayeredPane4;
@@ -1054,6 +1289,8 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane6;
     private javax.swing.JLayeredPane jLayeredPane7;
     private javax.swing.JLayeredPane jLayeredPane8;
+    private javax.swing.JLayeredPane jLayeredPane9;
+    private javax.swing.JLabel lblDeterminanteResultado;
     private javax.swing.JPanel menuPrincipal;
     private javax.swing.JPanel pnlDeterminante;
     private javax.swing.JPanel pnlMultiplicacion;
@@ -1085,6 +1322,15 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JTextField txtC31;
     private javax.swing.JTextField txtC32;
     private javax.swing.JTextField txtC33;
+    private javax.swing.JTextField txtMatrDeter11;
+    private javax.swing.JTextField txtMatrDeter12;
+    private javax.swing.JTextField txtMatrDeter13;
+    private javax.swing.JTextField txtMatrDeter21;
+    private javax.swing.JTextField txtMatrDeter22;
+    private javax.swing.JTextField txtMatrDeter23;
+    private javax.swing.JTextField txtMatrDeter31;
+    private javax.swing.JTextField txtMatrDeter32;
+    private javax.swing.JTextField txtMatrDeter33;
     private javax.swing.JTextField txtMatrizAM11;
     private javax.swing.JTextField txtMatrizAM12;
     private javax.swing.JTextField txtMatrizAM13;
@@ -1173,8 +1419,13 @@ public class App extends javax.swing.JFrame {
         cbMatrizM2.addItem("3*1");
         cbMatrizM2.addItem("3*2");
         cbMatrizM2.addItem("3*3");
+
+        cbMatrizDetermina.addItem("2*2");
+        cbMatrizDetermina.addItem("3*3");
+
     }
 
+    //para ocultar todas los cuadros de texto
     private void dejarOcultas() {
         txtA11.setVisible(false);
         txtA12.setVisible(false);
@@ -1206,9 +1457,6 @@ public class App extends javax.swing.JFrame {
         txtC32.setVisible(false);
         txtC33.setVisible(false);
 
-    }
-
-    private void dejarOcultasM() {
         txtMatrizAM11.setVisible(false);
         txtMatrizAM12.setVisible(false);
         txtMatrizAM13.setVisible(false);
@@ -1238,6 +1486,16 @@ public class App extends javax.swing.JFrame {
         txtMatrizCM31.setVisible(false);
         txtMatrizCM32.setVisible(false);
         txtMatrizCM33.setVisible(false);
+
+        txtMatrDeter11.setVisible(false);
+        txtMatrDeter12.setVisible(false);
+        txtMatrDeter13.setVisible(false);
+        txtMatrDeter21.setVisible(false);
+        txtMatrDeter22.setVisible(false);
+        txtMatrDeter23.setVisible(false);
+        txtMatrDeter31.setVisible(false);
+        txtMatrDeter32.setVisible(false);
+        txtMatrDeter33.setVisible(false);
     }
 
     private void dejarvisibleM1(String opc) {
@@ -1663,6 +1921,36 @@ public class App extends javax.swing.JFrame {
                 break;
             }
         }
+    }
+
+    private void dejarvisibleMD(String opc) {
+        switch (opc) {
+            case ("2*2"):
+                txtMatrDeter11.setVisible(true);
+                txtMatrDeter12.setVisible(true);
+                txtMatrDeter13.setVisible(false);
+                txtMatrDeter21.setVisible(true);
+                txtMatrDeter22.setVisible(true);
+                txtMatrDeter23.setVisible(false);
+                txtMatrDeter31.setVisible(false);
+                txtMatrDeter32.setVisible(false);
+                txtMatrDeter33.setVisible(false);
+                pnlDeterminante.updateUI();
+                break;
+            case ("3*3"):
+                txtMatrDeter11.setVisible(true);
+                txtMatrDeter12.setVisible(true);
+                txtMatrDeter13.setVisible(true);
+                txtMatrDeter21.setVisible(true);
+                txtMatrDeter22.setVisible(true);
+                txtMatrDeter23.setVisible(true);
+                txtMatrDeter31.setVisible(true);
+                txtMatrDeter32.setVisible(true);
+                txtMatrDeter33.setVisible(true);
+                pnlDeterminante.updateUI();
+                break;
+        }
+
     }
 
     private void visible_respuesta(String opc) {
